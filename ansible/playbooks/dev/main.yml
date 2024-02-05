@@ -1,0 +1,6 @@
+- name: Install web_app
+  hosts: yacloud-vm
+  roles:
+    - role: web_app
+      vars:
+        wipe_enabled: true
