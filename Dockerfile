@@ -8,9 +8,7 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY ./app /code/app
 
-RUN mkdir /code/log
-
-RUN adduser -D pythonapp && chown -R pythonapp /code
+RUN mkdir /code/log; adduser -D pythonapp && chown -R pythonapp /code
 
 USER pythonapp
 
